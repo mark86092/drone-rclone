@@ -1,0 +1,9 @@
+pipeline:
+    build:
+        image: plugins/docker
+        repo: mark86092/rclone
+        tag: rclone
+        secrets: [docker_username, docker_password]
+        when:
+            branch: master
+            event: push
